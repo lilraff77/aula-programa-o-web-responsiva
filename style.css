@@ -1,0 +1,181 @@
+/* ===== ESTILO GERAL ===== */
+body {
+    background-image: url('https://img.freepik.com/fotos-premium/fundo-perfeito-de-folhas-tropicais-coloridas_275400-1253.jpg');
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: #111;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #131921;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 4px solid #ff9900;
+}
+
+/* ===== MENU ===== */
+nav {
+    background-color: #232f3e;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff9900;
+}
+
+/* ===== IMAGENS (CORREÇÃO DE TAMANHO) ===== */
+img {
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+}
+
+/* ===== CARDS (TAMANHO ORIGINAL) ===== */
+.card {
+    background: white;
+    width: 250px; 
+    padding: 15px;
+    margin: 15px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    display: inline-block;
+    vertical-align: top;
+    /* Animação suave e fluida */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover {
+    transform: scale(1.05); /* Zoom original mantido */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Card de vídeo (Tamanho corrigido) */
+.video-card {
+    width: 500px; 
+    margin: 40px auto;
+    text-align: center;
+}
+
+.video-card img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* ===== TABELAS (TAMANHO ORIGINAL) ===== */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    background-color: #1f1f1f;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+th {
+    background-color: #232f3e;
+    color: #ff9900;
+    padding: 12px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #555;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+tr:hover {
+    background-color: #ff9900 !important;
+    color: #1f1f1f;
+    cursor: pointer;
+}
+
+tr:hover td {
+    font-weight: bold;
+}
+
+/* ===== BOTÕES (TAMANHO ORIGINAL) ===== */
+button {
+    background-color: #ff9900;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+button:hover {
+    background-color: #e68a00;
+    transform: scale(1.05);
+}
+
+/* ===== FORMULÁRIOS ===== */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff9900;
+    outline: none;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #131921;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Efeito de clique */
+.card:active {
+    transform: scale(0.98);
+}

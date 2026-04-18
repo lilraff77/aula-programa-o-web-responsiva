@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Tech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    🛒 Loja Tech - Tecnologia e Inovação
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#ofertas">Ofertas</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<div class="container">
+
+    <h1 id="titulo-boas-vindas"></h1>
+
+    <button onclick="mudarTema()">Mudar Tema</button>
+
+    <p>Os melhores produtos de tecnologia com os melhores preços.</p>
+
+    <p>Cliques nos produtos: <span id="contador">0</span></p>
+
+    <button onclick="mostrarCarrinho()">Ver Carrinho</button>
+
+    <div id="carrinho-visual">
+        <h3>🛒 Itens no meu Carrinho:</h3>
+        <ul id="itens-carrinho" style="list-style: none; padding: 0;">
+            </ul>
+    </div>
+
+    <h2>Produtos Disponíveis</h2>
+    <ul>
+        <li>Notebook Gamer</li>
+        <li>Consoles (PS5, Xbox, PS3)</li>
+        <li>Periféricos (Mouse, Teclado, Headset)</li>
+        <li>Cadeiras e Som</li>
+        <li>Jogos e Computadores Completos</li>
+    </ul>
+
+    <h2>Nossa Loja</h2>
+    <img src="https://news.tec.br/wp-content/uploads/2025/11/O-crescimento-das-lojas-de-produtos-gamers-no-Brasil-e-o-impacto-no-mercado-de-tecnologia.jpg"
+         onclick="clicouImagem()" style="cursor:pointer; width:100%; border-radius:10px;">
+
+    <h2 id="produtos">Vitrine de Produtos</h2>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Notebook Gamer</h3>
+        <img src="https://m.media-amazon.com/images/I/81JElV8apnL._AC_SX679_.jpg">
+        <p>Alto desempenho para jogos.</p>
+        <button onclick="comprarProduto('Notebook Gamer'); contarClique(); ('Notebook Gamer')">Comprar</button>
+    </div>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Playstation 5</h3>
+        <img src="https://m.media-amazon.com/images/I/51SM5xU-M1L._AC_SX679_.jpg">
+        <p>Nova geração de games</p>
+        <button onclick="comprarProduto('Playstation 5'); contarClique(); ('Playstation 5')">Comprar</button>
+    </div>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Xbox Series X</h3>
+        <img src="https://cms-assets.xboxservices.com/assets/bc/40/bc40fdf3-85a6-4c36-af92-dca2d36fc7e5.png?n=642227_Hero-Gallery-0_A1_857x676.png">
+        <p>O console mais poderoso</p>
+        <button onclick="comprarProduto('Xbox Series X'); contarClique(); ('Xbox Series X')">Comprar</button>
+    </div>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Computador Gamer</h3>
+        <img src="https://m.media-amazon.com/images/I/71BSrus2EpL._AC_SX679_.jpg">
+        <p>Perfeito para jogos e edição de vídeos</p>
+        <button onclick="comprarProduto('Computador Gamer'); contarClique(); ('Computador Gamer')">Comprar</button>
+    </div>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Headset Corsair Void</h3>
+        <img src="https://images4.kabum.com.br/produtos/fotos/109994/headset-gamer-wireless-corsair-void-elite-rgb-7-1-som-surround-drivers-50mm-branco-ca-9011202_1583766390_gg.jpg">
+        <p>Conforto premium e som surround 7.1</p>
+        <button onclick="comprarProduto('Headset Corsair'); contarClique(); ('Headset Corsair')">Comprar</button>
+    </div>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Headset Razer BlackShark</h3>
+        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_960540-MLA99423607226_112025-F.webp">
+        <p>Outra opção muito boa sem fio</p>
+        <button onclick="comprarProduto('Headset Corsair'); contarClique(); ('Headset Corsair')">Comprar</button>
+    </div>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Mouse Sem Fio</h3>
+        <img src="https://m.media-amazon.com/images/I/718b9wK3eaL._AC_SX679_.jpg">
+        <p>Conforto e precisão</p>
+        <button onclick="comprarProduto('Mouse Sem Fio'); contarClique(); ('Mouse Sem Fio')">Comprar</button>
+    </div>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Teclado Gamer HyperX</h3>
+        <img src="https://m.media-amazon.com/images/I/61fjJX9Jq2L._AC_SY300_SX300_QL70_ML2_.jpg">
+        <p>Tecnologia, agilidade e bom gosto</p>
+        <button onclick="comprarProduto('Teclado Gamer'); contarClique(); ('Teclado Gamer')">Comprar</button>
+    </div>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Cadeira Gamer Elements</h3>
+        <img src="https://m.media-amazon.com/images/I/5136+drDuIL._AC_SY300_SX300_QL70_ML2_.jpg">
+        <p>Performance e conforto para jogar</p>
+        <button onclick="comprarProduto('Cadeira Gamer'); contarClique(); ('Cadeira Gamer')">Comprar</button>
+    </div>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Caixa de Som Gamer</h3>
+        <img src="https://m.media-amazon.com/images/I/61WltEBabEL._AC_SL1500_.jpg">
+        <p>Som e efeitos RGB ao jogar</p>
+        <button onclick="comprarProduto('Caixa de Som'); contarClique(); ('Caixa de Som')">Comprar</button>
+    </div>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Jogo Space Marine 2</h3>
+        <img src="https://m.media-amazon.com/images/I/81oYUkXWukL._AC_SX679_.jpg">
+        <p>O melhor de todos os jogos</p>
+        <button onclick="comprarProduto('Space Marine'); contarClique(); ('Space Marine')">Comprar</button>
+    </div>
+
+    <div class="card" onmouseover="destacarCard(this)" onmouseout="removerDestaque(this)">
+        <h3>Jogo Elden Ring</h3>
+        <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTUpPa41F1gXtJsjmMZrDA7NLO26HALQ1HQQfhJBlr_64hBBjk5VSiGjXst64J5LMvgQOknc38r2d_choQMiBF_PRsUXXcl5Q">
+        <p>RGB de ação mundo aberto</p>
+        <button onclick="comprarProduto('Elden Ring '); contarClique(); ('Elden Ring')">Comprar</button>
+    </div>
+
+    <br>
+
+    <h2>Vídeos e Reviews</h2>
+    <div class="card video-card">
+        <h3>Review PS3</h3>
+        <a href="https://www.youtube.com/watch?v=vwwmXTaNFRA" target="_blank">
+            <img src="https://img.youtube.com/vi/vwwmXTaNFRA/hqdefault.jpg">
+        </a>
+        <p>Clique para assistir ao vídeo.</p>
+    </div>
+
+    <div class="card video-card">
+        <h3>PC Gamer em Ação</h3>
+        <a href="https://www.amazon.com.br/vdp/0e5d2420517e4a55b952d963e6a8c4b6" target="_blank">
+            <img src="https://m.media-amazon.com/images/I/71-gCNsrouL._AC_SX679_.jpg">
+        </a>
+        <p>Veja a performance deste PC.</p>
+    </div>
+
+    <hr>
+
+    <h2 id="ofertas">Tabela de Preços e Estoque</h2>
+    <table>
+        <tr><th>Produto</th><th>Preço</th><th>Estoque</th></tr>
+        <tr><td>Notebook Gamer</td><td>R$ 7.500</td><td>10</td></tr>
+        <tr><td>Computador Gamer</td><td>R$ 8.805</td><td>25</td></tr>
+        <tr><td>Playstation 5</td><td>R$ 3.990</td><td>30</td></tr>
+        <tr><td>Xbox Series X</td><td>R$ 5.371</td><td>20</td></tr>
+        <tr><td>Mouse Sem Fio</td><td>R$ 320</td><td>50</td></tr>
+        <tr><td>Headset Gamer Corsair</td><td>R$ 539</td><td>35</td></tr>
+        <tr><td>Cadeira Gamer</td><td>R$ 1.200</td><td>15</td></tr>
+        <tr><td>Teclado Gamer</td><td>R$ 500</td><td>35</td></tr>
+        <tr><td>Jogo Space Marine</td><td>R$ 250</td><td>20</td></tr>
+        <tr><td>Jogo Elden Ring</td><td>R$ 100</td><td>25</td></tr>
+    </table>
+
+    <h2 id="contato">Fale Conosco</h2>
+    <form onsubmit="return validarFormulario()">
+        <label>Nome:</label><br>
+        <input type="text" id="nome" placeholder="Digite seu nome"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" placeholder="Digite seu email"><br><br>
+
+        <label>Mensagem:</label><br>
+        <textarea placeholder="Digite sua mensagem"></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h2>Links Úteis</h2>
+    <p><a href="https://www.amazon.com.br/s?k=gamers" target="_blank">Acesse nossa loja diversificada na Amazon</a></p>
+</div>
+
+<footer>
+    © 2026 Loja Tech | Todos os direitos reservados
+</footer>
+
+<script src="script.js"></script>
+<div id="janela-carrinho" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 9999; overflow-y: auto; padding: 20px;">
+    <header style="display: flex; justify-content: space-between; align-items: center;">
+        <h2>🛒 Seu Carrinho Detalhado</h2>
+        <button onclick="fecharCarrinho()" style="width: 100px; background: red; color: white;">Fechar</button>
+    </header>
+    <hr>
+    <div id="lista-detalhada-carrinho">
+        </div>
+    <br>
+    <h3 id="total-itens">Total de itens: 0</h3>
+</div>
+</body>
+</html>
